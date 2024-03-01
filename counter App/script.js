@@ -1,45 +1,46 @@
-/* const count = document.querySelector('.count');
-const add = document.querySelector('.add');
-const resetCount = document.querySelector('.reset');
-const sub = document.querySelector('.subtract');
+// const count = document.querySelector('.count');
+// const add = document.querySelector('.add');
+// const resetCount = document.querySelector('.reset');
+// const sub = document.querySelector('.subtract');
 
-add.addEventListener('click', () => {
-  count.innerHTML++;
-});
+// add.addEventListener('click', () => {
+//   count.innerHTML++;
+//   count.style.color = 'blue';
+// });
 
-sub.addEventListener('click', () => {
-  count.innerHTML--;
-});
+// sub.addEventListener('click', () => {
+//   count.innerHTML--;
+//   count.style.color = 'red';
+// });
 
-resetCount.addEventListener('click', () => {
-  count.innerHTML = 0;
-});
- */
+// resetCount.addEventListener('click', () => {
+//   count.innerHTML = 0;
+//   count.style.color = 'black';
+// });
 
-const btn = document.querySelector('.btns');
+let value = 0;
 const count = document.querySelector('.count');
+const btns = document.querySelectorAll('.btn');
 
-btn.addEventListener('click', (e) => {
-  if (e.target.classList.contains('add')) {
-    count.innerHTML++;
-    setColor();
-  }
-  if (e.target.classList.contains('subtract')) {
-    count.innerHTML--;
-    setColor();
-  }
-  if (e.target.classList.contains('reset')) {
-    count.innerHTML = 0;
-    setColor();
-  }
+btns.forEach(function (btn) {
+  btn.addEventListener('click', (e) => {
+    const style = e.currentTarget.classList;
+    if (style.contains('subtract')) {
+      value--;
+    } else if (style.contains('add')) {
+      value++;
+    } else {
+      value = 0;
+    }
+    count.textContent = value;
+    if (value < 0) {
+      count.style.color = 'red';
+    }
+    if (value > 0) {
+      count.style.color = 'blue';
+    }
+    if (value == 0) {
+      count.style.color = 'black';
+    }
+  });
 });
-
-function setColor() {
-  if (count.innerHTML > 0) {
-    count.style.color = 'yellow';
-  } else if (count.innerHTML < 0) {
-    count.style.color = 'orangered';
-  } else {
-    count.style.color = '#fff';
-  }
-}
