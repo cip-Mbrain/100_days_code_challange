@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
+:root {
+  --white: #fff;
+  --black: #1c2b2d;
+  --blue: #31326f;
+  --light-blue: #005490;
+  --color-primary: #9d0191;
+  --color-sec: #db64900;
+  --color-grey: #eee;
+  --color-dark-grey: #222831;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+p {
+  font-family: 1.6rem;
+  line-height: 1.5;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.counter-div {
+  background: var(--light-blue);
+  width: 40rem;
+  padding: 1.5rem;
+  border: 1px solid var(--color-dark-grey);
+  color: var(--white);
+  text-align: center;
+  border-radius: 0.75rem;
+}
+
+.counter-div h1 {
+  text-transform: capitalize;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 2rem;
+}
+
+.counter-div span {
+  font-size: 4.5rem;
+}
+
+.btns {
+  padding: 1.5rem 0;
+}
+
+button {
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  margin-right: 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  font-weight: bolder;
+  color: var(--white);
+  transition: all 0.2s linear;
+}
+
+.subtract {
+  background: #18690d;
+}
+.subtract:hover,
+.add:hover,
+.reset:hover {
+  transform: scale(1.1);
+}
+
+.reset {
+  color: var(--black);
+}
+.add {
+  background: #18690d;
+}
