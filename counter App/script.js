@@ -44,3 +44,17 @@ btns.forEach(function (btn) {
     }
   });
 });
+
+// another Method
+// const btns = document.querySelector('.button-container');
+
+// btns.addEventListener('click', (e) => {
+//   const style = e.target.classList;
+//   if (style.contains('add')) {
+//     count.innerHTML++;
+//   } else if (style.contains('subtract')) {
+//     count.innerHTML--;
+//   } else {
+//     count.innerHTML = 0;
+//   }
+// });
