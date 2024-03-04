@@ -102,16 +102,6 @@ header p {
   color: var(--black);
 }
 
-.modal-content {
-  width: 80vw;
-  max-width: var(--fixed-width);
-  background: var(--white);
-  padding: 2rem;
-  text-align: center;
-  position: relative;
-  margin: 0 auto;
-  top: 10rem;
-}
 .modal-content span {
   font-size: 3rem;
   font-weight: bold;
@@ -135,23 +125,32 @@ header p {
 }
 
 .modal {
+  /* display: none; */
   position: absolute;
-  background: rgba(23, 78, 117, 0.5);
+  background: rgba(0, 0, 0, 0.5);
   height: 100%;
   width: 100%;
-  visibility: hidden;
-  z-index: -10;
+  display: none;
+  z-index: 10;
+}
+.modal-content {
+  width: 80vw;
+  max-width: var(--fixed-width);
+  background: var(--white);
+  padding: 2rem;
+  text-align: center;
+  position: relative;
+  margin: 10rem auto;
+  animation: slide ease 0.8s;
 }
 
 .show-modal {
-  visibility: visible;
-  z-index: 10;
-  animation: slide, 2s, linear;
+  display: block;
 }
 
 @keyframes slide {
   0% {
-    transform: translateY(10%);
+    transform: translateY(-30rem);
   }
   100% {
     transform: translateY(0);
